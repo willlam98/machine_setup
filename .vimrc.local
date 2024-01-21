@@ -14,7 +14,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 call plug#end()
-colorscheme industry
 
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -25,7 +24,7 @@ colorscheme PaperColor
 let g:PaperColor_Theme_Options = {
   \   'theme': {
   \     'default.dark': {
-  \       'transparent_background': 1
+  \       'transparent_background': 0
   \     }
   \   },
   \   'language': {
@@ -67,4 +66,5 @@ inoremap <C-S> <C-O>:update<CR>
 
 nnoremap <silent> f :Files<CR>
 
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-e> :NERDTreeToggle<CR>
+nnoremap <C-n> :bnext<CR>

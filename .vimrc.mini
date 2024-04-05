@@ -1,0 +1,30 @@
+source ~/.vim/plugin/auto-pairs.vim
+
+set termencoding=utf-8
+set encoding=utf8
+
+if has("autocmd")
+	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+	\| exe "normal! g'\"" | endif
+endif
+set background=dark
+colorscheme industry
+
+set nu
+syntax on
+set whichwrap+=<,>,[,]
+set backspace=indent,eol,start
+set mouse=a
+set textwidth=80
+set tabstop=4
+set shiftwidth=4
+set autoindent
+set cursorline
+set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
+set list
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+set updatetime=100
+
+set undodir=~/.vim/undo-dir
+set undofile
+

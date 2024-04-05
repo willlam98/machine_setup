@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
+  Plug 'tmsvg/pear-tree'
 call plug#end()
 
 if has("autocmd")
@@ -60,11 +61,6 @@ set undodir=~/.vim/undo-dir
 set undofile
 
 
-noremap <C-S> :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-inoremap <C-S> <C-O>:update<CR>
-
 nnoremap <silent> f :Files<CR>
 
 nnoremap <C-e> :NERDTreeToggle<CR>
-nnoremap <C-n> :bnext<CR>

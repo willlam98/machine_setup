@@ -22,7 +22,7 @@ fi
 
 function setup_vimrc() {
 	mini_ver=$1
-	if [ $mini_ver == "mini" ]
+	if [[ "$mini_ver" == "mini" ]]
 	then
 		mkdir -p ~/.vim/undo-dir
 		mkdir -p ~/.vim/plugin/
@@ -40,17 +40,19 @@ function setup_vimrc() {
 
 function get_tools() {
 	echo "Downloading tools..."
-	if [ $os=="Darwin" ]
+	if [[ "$os" == "Darwin" ]]
 	then
-		brew install gdb tig tmux tree vim wget watch grep htop ctags fzf
-	elif [ $os=="Linux" ]
+		brew install gdb tig tmux tree vim wget watch grep htop ctags curl
+	elif [[ "$os" == "Linux" ]]
 	then
 		apt update
-		apt install build-essential tmux tree tig htop vim universal-ctag \
-			silversearcher-ag fzf
+		apt install -y build-essential tmux tree tig htop vim universal-ctags \
+			silversearcher-ag curl
 	else
 		exit 1
 	fi
+	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+	~/.fzf/install
 }
 
 function setup_others() {

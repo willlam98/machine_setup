@@ -4,7 +4,7 @@ set encoding=utf8
 call plug#begin('~/.vim/plugged')
   Plug 'NLKNguyen/papercolor-theme'
   Plug 'preservim/nerdtree'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'airblade/vim-gitgutter'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'

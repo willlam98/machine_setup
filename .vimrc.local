@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
   Plug 'tmsvg/pear-tree'
+  Plug 'ekalinin/Dockerfile.vim'
 call plug#end()
 
 if has("autocmd")

@@ -48,7 +48,7 @@ syntax on
 set whichwrap+=<,>,[,]
 set backspace=indent,eol,start
 set mouse=a
-set textwidth=80
+"set textwidth=80
 set tabstop=4
 set shiftwidth=4
 set autoindent
@@ -57,9 +57,13 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set updatetime=100
+set hlsearch
+set incsearch
 
 set undodir=~/.vim/undo-dir
 set undofile
+
+autocmd BufNewFile,BufRead *.service* set ft=systemd
 
 
 nnoremap <silent> f :Files<CR>
